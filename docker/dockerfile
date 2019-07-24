@@ -1,0 +1,11 @@
+FROM python:3
+USER root
+
+RUN apt-get update
+ENV TERM xterm
+
+RUN pip install --upgrade pip
+RUN pip install --upgrade setuptools 
+RUN pip install --upgrade flask tensorflow pandas opencv-python matplotlib scipy numpy jupyter flask statsmodels notebook Cython contextlib2 pillow lxml SciKit-Learn
+RUN pip install https://download.pytorch.org/whl/cpu/torch-1.1.0-cp37-cp37m-linux_x86_64.whl
+RUN pip install https://download.pytorch.org/whl/cpu/torchvision-0.3.0-cp37-cp37m-linux_x86_64.whl
